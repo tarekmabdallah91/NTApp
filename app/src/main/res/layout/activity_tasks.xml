@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/app_bar_home_page"
+        layout="@layout/app_bar_home_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/tabs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/app_bar_home_page">
+
+        <TextView
+            android:id="@+id/all_tasks_tv"
+            style="@style/tasks_btns"
+            android:layout_weight="1"
+            android:text="All tasks" />
+
+        <TextView
+            android:id="@+id/open_tv"
+            style="@style/tasks_btns"
+            android:layout_weight="1"
+            android:text="Open" />
+
+        <TextView
+            android:id="@+id/closed_tv"
+            style="@style/tasks_btns"
+            android:layout_weight="1"
+            android:text="Closed" />
+
+        <TextView
+            android:id="@+id/filter_tv"
+            style="@style/tasks_btns"
+            android:layout_weight="1"
+            android:text="Filter" />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/task_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabs_layout"/>
+
+
+
+
+</RelativeLayout>

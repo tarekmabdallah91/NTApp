@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/app_bar_home_page"
+        layout="@layout/app_bar_home_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_below="@id/app_bar_home_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_card_layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <View
+                android:id="@+id/center_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/bg_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/header_bg"
+                app:layout_constraintHeight_percent=".5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/center_view"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/center_view"
+                app:layout_constraintBottom_toBottomOf="@id/center_view"
+                app:cardCornerRadius="@dimen/cards_radius"
+                android:layout_margin="@dimen/space18">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/header_home_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:scaleType="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <View
+                        android:id="@+id/circular_view"
+                        android:layout_width="@dimen/circular_view_radius"
+                        android:layout_height="@dimen/circular_view_radius"
+                        android:background="@drawable/circular_shape"
+                        android:layout_margin="@dimen/space18"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/user_photo_IV"
+                        android:layout_width="@dimen/circular_view_radius"
+                        android:layout_height="@dimen/circular_view_radius"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_user"
+                        app:layout_constraintStart_toStartOf="@id/circular_view"
+                        app:layout_constraintEnd_toEndOf="@id/circular_view"
+                        app:layout_constraintTop_toTopOf="@id/circular_view"
+                        app:layout_constraintBottom_toBottomOf="@id/circular_view"/>
+
+                    <View
+                        android:id="@+id/icon_exit_bg"
+                        android:layout_width="@dimen/icons_size"
+                        android:layout_height="@dimen/icons_size"
+                        android:background="@drawable/rounded_bg"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/space18"
+                        android:layout_marginTop="@dimen/space18"/>
+
+
+                    <ImageView
+                        android:id="@+id/icon_exit_iv"
+                        android:layout_width="@dimen/icon_drawable_size"
+                        android:layout_height="@dimen/icon_drawable_size"
+                        android:padding="@dimen/space2"
+                        android:src="@drawable/icon_exit"
+                        app:layout_constraintTop_toTopOf="@id/icon_exit_bg"
+                        app:layout_constraintBottom_toBottomOf="@id/icon_exit_bg"
+                        app:layout_constraintStart_toStartOf="@id/icon_exit_bg"
+                        app:layout_constraintEnd_toEndOf="@id/icon_exit_bg" />
+
+                    <View
+                        android:id="@+id/icon_search_bg"
+                        android:layout_width="@dimen/icons_size"
+                        android:layout_height="@dimen/icons_size"
+                        android:background="@drawable/rounded_bg"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/icon_exit_bg"
+                        android:layout_marginEnd="@dimen/space4"
+                        android:layout_marginTop="@dimen/space18"/>
+
+
+                    <ImageView
+                        android:id="@+id/icon_search_iv"
+                        android:layout_width="@dimen/icon_drawable_size"
+                        android:layout_height="@dimen/icon_drawable_size"
+                        android:padding="@dimen/space2"
+                        android:src="@drawable/icon_search"
+                        app:layout_constraintTop_toTopOf="@id/icon_search_bg"
+                        app:layout_constraintBottom_toBottomOf="@id/icon_search_bg"
+                        app:layout_constraintStart_toStartOf="@id/icon_search_bg"
+                        app:layout_constraintEnd_toEndOf="@id/icon_search_bg" />
+
+                    <TextView
+                        android:id="@+id/hi_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hi,"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/myriad_arabic_regular"
+                        android:layout_marginTop="@dimen/space8"
+                        android:layout_marginStart="@dimen/space8"
+                        app:layout_constraintTop_toBottomOf="@id/circular_view"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/username_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mohamed"
+                        android:textColor="@color/note_txt"
+                        android:textStyle="bold"
+                        android:paddingStart="@dimen/space4"
+                        android:fontFamily="@font/myriad_arabic_regular"
+                        android:layout_marginTop="@dimen/space8"
+                        app:layout_constraintStart_toEndOf="@id/hi_TV"
+                        app:layout_constraintTop_toBottomOf="@id/circular_view" />
+
+                    <TextView
+                        android:id="@+id/note_home_page_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get ready for your new tasks"
+                        android:textColor="@color/gray"
+                        android:textStyle="italic"
+                        android:fontFamily="@font/myriad_arabic_regular"
+                        android:layout_marginStart="@dimen/space8"
+                        android:paddingBottom="@dimen/space8"
+                        app:layout_constraintTop_toBottomOf="@id/hi_TV"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space4"
+            android:orientation="vertical"
+            android:layout_below="@id/user_card_layout_id">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/cards_radius"
+                    android:layout_margin="@dimen/space8">
+
+                    <LinearLayout
+                        android:id="@+id/tasks_layout_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/home_items_images"
+                            android:src="@drawable/icon_tasks" />
+
+                        <TextView
+                            style="@style/home_items_title"
+                            android:text="Tasks" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:orientation="vertical"
+                            android:gravity="center|end"
+                            android:background="@drawable/bg_remaining"
+                            android:layout_marginBottom="@dimen/space18"
+                            android:layout_marginStart="@dimen/space18">
+
+                            <TextView
+                                android:id="@+id/tasks_count_tv"
+                                style="@style/home_items_count"
+                                android:text="35" />
+
+                            <TextView
+                                style="@style/home_items_label"
+                                android:text="items remaining" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/cards_radius"
+                    android:layout_margin="@dimen/space8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/home_items_images"
+                            android:src="@drawable/icon_work_orders" />
+
+                        <TextView
+                            style="@style/home_items_title"
+                            android:text="Work Orders" />/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:orientation="vertical"
+                            android:gravity="center|end"
+                            android:background="@drawable/bg_remaining"
+                            android:layout_marginBottom="@dimen/space18"
+                            android:layout_marginStart="@dimen/space18">
+
+                            <TextView
+                                android:id="@+id/work_orders_count_tv"
+                                style="@style/home_items_count"
+                                android:text="18" />
+
+                            <TextView
+                                style="@style/home_items_label"
+                                android:text="items remaining" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/cards_radius"
+                    android:layout_margin="@dimen/space8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/home_items_images"
+                            android:src="@drawable/icon_upload" />
+
+                        <TextView
+                            style="@style/home_items_title"
+                            android:text="Upload" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:orientation="vertical"
+                            android:gravity="center|end"
+                            android:background="@drawable/bg_remaining"
+                            android:layout_marginBottom="@dimen/space18"
+                            android:layout_marginStart="@dimen/space18">
+
+                            <TextView
+                                android:id="@+id/upload_count"
+                                style="@style/home_items_count"
+                                android:text="4190" />
+
+                            <TextView
+                                style="@style/home_items_label"
+                                android:text="items remaining"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/cards_radius"
+                    android:layout_margin="@dimen/space8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/home_items_images"
+                            android:src="@drawable/icon_notification" />
+
+                        <TextView
+                            style="@style/home_items_title"
+                            android:text="Notifications" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:orientation="vertical"
+                            android:gravity="center|end"
+                            android:background="@drawable/bg_remaining"
+                            android:layout_marginBottom="@dimen/space18"
+                            android:layout_marginStart="@dimen/space18">
+
+                            <TextView
+                                android:id="@+id/notifications_count"
+                                style="@style/home_items_count"
+                                android:text="66"
+                                />
+
+                            <TextView
+                                style="@style/home_items_label"
+                                android:text="items remaining" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/copyrights_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

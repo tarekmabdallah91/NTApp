@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.loginActivity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/bgIV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_login" />
+
+    <ImageView
+        android:id="@+id/logoIv"
+        android:layout_width="@dimen/nt_icon_dim"
+        android:layout_height="@dimen/nt_icon_dim"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/margin_top_1pg"
+        android:layout_marginStart="@dimen/space18"
+        android:src="@drawable/icon_logo"/>
+
+    <RelativeLayout
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/logoIv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/space18"
+        android:padding="@dimen/space4"
+        android:gravity="center"
+        android:background="@drawable/background_spinner">
+
+        <ImageView
+            android:layout_width="@dimen/icon_drawable_small_size"
+            android:layout_height="@dimen/icon_drawable_small_size"
+            android:layout_alignTop="@id/lang_spinner"
+            android:layout_alignBottom="@id/lang_spinner"
+            android:src="@drawable/ic_down_arrow"/>
+
+        <Spinner
+            android:id="@+id/lang_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space4"
+            android:paddingStart="@dimen/space4"
+            android:background="@null" />
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/welcomeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_back_1pg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="@font/myriad_arabic_regular"
+        android:layout_below="@id/logoIv"
+        android:layout_marginTop="@dimen/space18"
+        android:layout_marginStart="@dimen/space18"/>
+
+    <TextView
+        android:id="@+id/noteTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_hint_1pg"
+        android:textColor="@color/note_txt"
+        android:fontFamily="@font/myriad_arabic_regular"
+        android:layout_below="@id/welcomeTv"
+        android:layout_marginStart="@dimen/space18"/>
+
+
+    <EditText
+        android:id="@+id/usernameEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username_email_hint_1pg"
+        android:textAllCaps="true"
+        android:textColor="@color/singIn_txt"
+        android:fontFamily="@font/myriad_arabic_regular"
+        android:background="@drawable/rounded_bg"
+        android:layout_below="@id/noteTv"
+        android:drawableStart="@drawable/icon_user_drawable"
+        android:paddingStart="@dimen/space8"
+        android:padding="@dimen/space8"
+        android:drawablePadding="@dimen/space8"
+        android:layout_marginTop="@dimen/spaces4"
+        android:layout_marginStart="@dimen/space18"
+        android:layout_marginEnd="@dimen/space18"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- TODO to let password visible -->
+
+    <EditText
+        android:id="@+id/passwordEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:text="@string/password_placholder_1pg"
+        android:textColor="@color/singIn_txt"
+        android:fontFamily="@font/myriad_arabic_regular"
+        android:background="@drawable/rounded_bg"
+        android:shadowRadius="15"
+        android:layout_below="@id/usernameEntry"
+        android:drawableStart="@drawable/icon_lock_drawable"
+        android:padding="@dimen/space8"
+        android:paddingStart="@dimen/space8"
+        android:drawablePadding="@dimen/space8"
+        android:layout_marginTop="@dimen/spaces4"
+        android:layout_marginStart="@dimen/space18"
+        android:layout_marginEnd="@dimen/space18"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/signInBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEntry"
+        android:layout_marginTop="@dimen/spaces4"
+        android:layout_marginStart="@dimen/space18"
+        android:text="@string/sign_in_btn_label_1pg"
+        android:textAllCaps="false"
+        android:textColor="@color/singIn_txt"
+        app:backgroundTint="@color/singIn_bg" />
+
+
+    <TextView
+        android:id="@+id/forgetPasswordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgetPassword"
+        android:gravity="center"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_alignTop="@id/signInBt"
+        android:layout_toEndOf="@id/signInBt"
+        android:layout_alignBottom="@id/signInBt" />
+
+    <include layout="@layout/copyrights_layout"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

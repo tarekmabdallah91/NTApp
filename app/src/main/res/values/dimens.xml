@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="space0">0dp</dimen>
+    <dimen name="space1">1dp</dimen>
+    <dimen name="space2">2dp</dimen>
+    <dimen name="space4">4dp</dimen>
+    <dimen name="space16">16dp</dimen>
+    <dimen name="space50">50dp</dimen>
+
+    <dimen name="progress_bar_size">24dp</dimen>
+    <dimen name="icons_size">24dp</dimen>
+    <dimen name="search_text_size">12sp</dimen>
+    <dimen name="text_size">18sp</dimen>
+
+    <dimen name="nt_icon_dim">60dp</dimen>
+    <dimen name="space18">18dp</dimen>
+    <dimen name="space8">8dp</dimen>
+    <dimen name="spaces4">4dp</dimen>
+
+    <dimen name="icon_size">50dp</dimen>
+    <dimen name="icon_drawable_size">18dp</dimen>
+    <dimen name="icon_drawable_small_size">12dp</dimen>
+    <dimen name="margin_top_1pg">30dp</dimen>
+    <dimen name="tall_toolbar_height">200dp</dimen>
+
+    <dimen name="home_view_bg_height">150dp</dimen>
+    <dimen name="circular_view_radius">100dp</dimen>
+    <dimen name="circular_user_photo_raduis">90dp</dimen>
+    <dimen name="cards_radius">8dp</dimen>
+</resources>

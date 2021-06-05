@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/lang_item"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:text="@string/en_lang" />
