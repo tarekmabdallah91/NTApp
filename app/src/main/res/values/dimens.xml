@@ -18,6 +18,7 @@
     <dimen name="space8">8dp</dimen>
     <dimen name="spaces4">4dp</dimen>
 
+    <dimen name="icon_bg_size">35dp</dimen>
     <dimen name="icon_size">50dp</dimen>
     <dimen name="icon_drawable_size">18dp</dimen>
     <dimen name="icon_drawable_small_size">12dp</dimen>
@@ -28,4 +29,6 @@
     <dimen name="circular_view_radius">100dp</dimen>
     <dimen name="circular_user_photo_raduis">90dp</dimen>
     <dimen name="cards_radius">8dp</dimen>
+    <dimen name="small_text_size">8sp</dimen>
+    <dimen name="tasks_btns_text_size">12sp</dimen>
 </resources>

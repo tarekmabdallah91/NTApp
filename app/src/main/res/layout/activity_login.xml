@@ -103,7 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:text="@string/password_placholder_1pg"
+        android:text="@string/password_placeholder_1pg"
         android:textColor="@color/singIn_txt"
         android:fontFamily="@font/myriad_arabic_regular"
         android:background="@drawable/rounded_bg"

@@ -15,4 +15,10 @@
     <color name="note_txt">#38df5b</color>
     <color name="copyrightsTV_bg">#250f2b</color>
     <color name="gray">#dedede</color>
+    <color name="status_red">#e00000</color>
+    <color name="status_gray">#8f8f8f</color>
+    <color name="status_green">#4f8855</color>
+    <color name="status_yellow">#ca9d36</color>
+    <color name="task_bg_color">#5f4877</color>
+
 </resources>

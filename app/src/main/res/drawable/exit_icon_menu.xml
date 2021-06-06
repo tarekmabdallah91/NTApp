@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="@dimen/icons_size"
+        android:height="@dimen/icons_size"
+        android:drawable="@drawable/rounded_bg"
+        android:gravity="center" />
+    <item
+        android:width="@dimen/icon_drawable_small_size"
+        android:height="@dimen/icon_drawable_small_size"
+        android:drawable="@drawable/icon_exit"
+        android:gravity="center" />
+
+
+</layer-list>

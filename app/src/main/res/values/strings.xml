@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">NTApp</string>
 
     <string name="forgetPassword"><u>Forget password ?</u></string>
@@ -7,12 +7,21 @@
     <string name="welcome_back_1pg">Welcome back</string>
     <string name="login_hint_1pg">Please enter your credential login information.</string>
     <string name="username_email_hint_1pg">username/ email</string>
-    <string name="password_placholder_1pg">password</string>
+    <string name="password_placeholder_1pg">password</string>
     <string name="sign_in_btn_label_1pg">Sign in</string>
     <string name="copyright_txt">© nextask - v1.2</string>
 
     <string name="hello_blank_fragment">will display tasks here</string>
     <string name="action_search">Search</string>
     <string name="action_exit">Exit</string>
+    <string name="placeholder_title">IP PM Activation Failure at UQ</string>
+    <string name="placeholder_id">RAF2M3508</string>
+    <string name="placeholder_date" tools:ignore="TypographyDashes">15–3-2021 | 8:30am</string>
+    <string name="cm">CM</string>
+    <string name="pmr">PMR</string>
+    <string name="all_tasks">All tasks</string>
+    <string name="open">Open</string>
+    <string name="closed">Closed</string>
+    <string name="filter">Filter</string>
 
 </resources>

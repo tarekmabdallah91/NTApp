@@ -10,7 +10,7 @@
 
     <include
         android:id="@+id/app_bar_home_page"
-        layout="@layout/app_bar_home_page"
+        layout="@layout/toolbar_activity_tasks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -20,41 +20,151 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/app_bar_home_page">
+        android:layout_below="@id/app_bar_home_page"
+        android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/all_tasks_tv"
-            style="@style/tasks_btns"
-            android:layout_weight="1"
-            android:text="All tasks" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tasks_layout"
+            style="@style/tasks_btns_layout"
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/open_tv"
-            style="@style/tasks_btns"
-            android:layout_weight="1"
-            android:text="Open" />
+            <TextView
+                android:id="@+id/all_tasks_tv"
+                style="@style/tasks_btns"
+                android:text="@string/all_tasks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tasks_count"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/closed_tv"
-            style="@style/tasks_btns"
-            android:layout_weight="1"
-            android:text="Closed" />
+            <TextView
+                android:id="@+id/tasks_count"
+                style="@style/tasks_count_btns"
+                android:text="25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/filter_tv"
-            style="@style/tasks_btns"
-            android:layout_weight="1"
-            android:text="Filter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opened_layout"
+            style="@style/tasks_btns_layout"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/open_tv"
+                style="@style/tasks_btns"
+                android:text="@string/open"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/opened_count"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/opened_count"
+                style="@style/tasks_count_btns"
+                android:text="18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/closed_layout"
+            style="@style/tasks_btns_layout"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/closed_tv"
+                style="@style/tasks_btns"
+                android:text="@string/closed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/closed_count"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/closed_count"
+                style="@style/tasks_count_btns"
+                android:text="7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/filter_layout"
+            style="@style/tasks_btns_layout"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/filter_tv"
+                style="@style/tasks_btns"
+                android:text="@string/filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/filter_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/filter_icon"
+                android:layout_width="@dimen/icon_drawable_small_size"
+                android:layout_height="@dimen/icon_drawable_small_size"
+                android:layout_margin="@dimen/space4"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/task_fragment"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tabs_layout"/>
-
-
-
+        android:layout_below="@id/tabs_layout" />
 
 </RelativeLayout>
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/tabs_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_below="@id/app_bar_home_page">-->
+
+    <!--<TextView-->
+    <!--    android:id="@+id/all_tasks_tv"-->
+    <!--    style="@style/tasks_btns"-->
+    <!--    android:layout_weight="1"-->
+    <!--    android:text="@string/all_tasks" />-->
+
+    <!--<TextView-->
+    <!--    android:id="@+id/tasks_count"-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="wrap_content"/>-->
+
+    <!--<TextView-->
+    <!--    android:id="@+id/open_tv"-->
+    <!--    style="@style/tasks_btns"-->
+    <!--    android:layout_weight="1"-->
+    <!--    android:text="@string/open" />-->
+
+    <!--<TextView-->
+    <!--    android:id="@+id/closed_tv"-->
+    <!--    style="@style/tasks_btns"-->
+    <!--    android:layout_weight="1"-->
+    <!--    android:text="@string/closed" />-->
+
+    <!--<TextView-->
+    <!--    android:id="@+id/filter_tv"-->
+    <!--    style="@style/tasks_btns"-->
+    <!--    android:layout_weight="1"-->
+    <!--    android:text="@string/filter" />-->
+
+    <!--</LinearLayout>-->

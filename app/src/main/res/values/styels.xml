@@ -53,16 +53,45 @@
     <style name="tasks_btns">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/cairo_regular</item>
-        <item name="android:background">@drawable/btn_selector</item>
         <item name="android:textColor">@drawable/text_selector</item>
+        <item name="android:padding">@dimen/space2</item>
+        <item name="android:textSize">@dimen/tasks_btns_text_size</item>
+    </style>
+
+    <style name="tasks_count_btns">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/cairo_regular</item>
+        <item name="android:textColor">@drawable/tasks_count_text_selector</item>
+        <item name="android:background">@drawable/tasks_count_selector</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:layout_marginStart">@dimen/space8</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tasks_btns_layout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_selector</item>
         <item name="android:layout_margin">@dimen/spaces4</item>
         <item name="android:padding">@dimen/spaces4</item>
-        <item name="android:gravity">center</item>
-        <item name="android:clickable">true</item>
     </style>
-<!--    <item name="android:textColor">@color/singIn_txt</item>-->
-<!--    <item name="android:background">@drawable/btn_selector</item>-->
 
+
+    <style name="tasks_item_date_btns">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_bg</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/cairo_regular</item>
+        <item name="android:background">@drawable/rounded_bg_with_border</item>
+        <item name="android:padding">@dimen/spaces4</item>
+        <item name="android:layout_marginStart">@dimen/spaces4</item>
+        <item name="android:layout_marginTop">@dimen/spaces4</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 </resources>
